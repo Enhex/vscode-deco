@@ -1,0 +1,29 @@
+{
+    "name": "deco",
+    "displayName": "Deco",
+    "description": "Deco Language Support",
+    "version": "0.0.2",
+    "publisher": "Enhex",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "icon": "images/logo.png",
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "homepage": "https://github.com/Enhex/vscode-deco",
+    "contributes": {
+        "languages": [{
+            "id": "deco",
+            "aliases": ["Deco", "deco"],
+            "extensions": [".deco"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "deco",
+            "scopeName": "source.deco",
+            "path": "./syntaxes/deco.tmLanguage.json"
+        }]
+    }
+}

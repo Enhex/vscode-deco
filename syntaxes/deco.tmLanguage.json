@@ -1,0 +1,57 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Deco",
+	"patterns": [
+		{
+			"include": "#set.end"
+		},
+		{
+			"include": "#content.begin"
+		},
+		{
+			"include": "#set.begin.anonymous"
+		},
+		{
+			"include": "#set.begin"
+		},
+		{
+			"include": "#content.end"
+		}
+	],
+	"repository": {
+		"content.begin": {
+			"patterns": [{
+				"name": "string.quoted",
+				"match": "^([ \t]*)(')"
+			}]
+		},
+		"content.end": {
+			"patterns": [{
+				"name": "string.quoted",
+				"match": "'\n"
+			}]
+		},
+		"set.begin": {
+			"patterns": [{
+				"match": "^([ \t]*)(.+)(:\n)",
+				"captures": {
+					"2": {"name": "support.class"},
+					"3": {"name": "entity.name.function"}
+				}
+			}]
+		},
+		"set.begin.anonymous": {
+			"patterns": [{
+				"name": "entity.name.function",
+				"match": ":\n"
+			}]
+		},
+		"set.end": {
+			"patterns": [{
+				"name": "entity.name.tag",
+				"match": "^[ \t]*:\n"
+			}]
+		}
+	},
+	"scopeName": "source.deco"
+}
