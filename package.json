@@ -12,6 +12,10 @@
     ],
     "icon": "images/logo.png",
     "license": "SEE LICENSE IN LICENSE.txt",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Enhex/vscode-deco.git"
+    },
     "homepage": "https://github.com/Enhex/vscode-deco",
     "contributes": {
         "languages": [{
