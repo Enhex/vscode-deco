@@ -3,16 +3,16 @@
 	"name": "Deco",
 	"patterns": [
 		{
-			"include": "#set.end"
+			"include": "#list.end"
 		},
 		{
 			"include": "#content.begin"
 		},
 		{
-			"include": "#set.begin.anonymous"
+			"include": "#list.begin.anonymous"
 		},
 		{
-			"include": "#set.begin"
+			"include": "#list.begin"
 		},
 		{
 			"include": "#content.end"
@@ -31,7 +31,7 @@
 				"match": "'\n"
 			}]
 		},
-		"set.begin": {
+		"list.begin": {
 			"patterns": [{
 				"match": "^([ \t]*)(.+)(:\n)",
 				"captures": {
@@ -40,13 +40,13 @@
 				}
 			}]
 		},
-		"set.begin.anonymous": {
+		"list.begin.anonymous": {
 			"patterns": [{
 				"name": "entity.name.function",
 				"match": ":\n"
 			}]
 		},
-		"set.end": {
+		"list.end": {
 			"patterns": [{
 				"name": "entity.name.tag",
 				"match": "^[ \t]*:\n"
